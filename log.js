@@ -1,4 +1,3 @@
-
 let entrada="";
 let codigo=0;
 let binario="";
@@ -13,6 +12,10 @@ function limpiart3 (){
 }
 function casci(){
     entrada=document.getElementById("caracter").value;
+    if(entrada ==""){
+        alert("Porf favor, ingrese un caracter antes de convertir");
+        return;
+    }
     codigo=entrada.charCodeAt(0);
     document.getElementById("rescasci").value="";
     document.getElementById("rescasci").innerText="El caracter "+entrada+" en codigo ASCCI es:"+codigo;
@@ -21,6 +24,10 @@ function casci(){
 }
 function ascbin(){
     let cod = document.getElementById("ascci").value;
+    if(cod ==""){
+        alert("Porf favor, ingrese un caracter antes de convertir");
+        return;
+    }
     for (let i = 7; i>=0 ;i--){
         if (2 ** i<= cod){
             binario=binario+"1";
@@ -36,6 +43,10 @@ function ascbin(){
 }
 function bincar (){
     let tbin=document.getElementById("binario").value;
+    if(tbin ==""){
+        alert("Porf favor, ingrese un caracter antes de convertir");
+        return;
+    }
     let caracter = "";
     let suma =0;
     for (let vc=7;vc>=0;vc--){
