@@ -16,7 +16,7 @@
         <div class="section">
             <h2>Convertir Caracter a ASCCI</h2>
             <label><b>Ingrese un Caracter:</b></label>
-            <input type="text" id="caracter">
+            <input type="text" id="caracter" required>
             <br>
             <button onclick="casci()">Convertir</button>
             <button onclick="limpiart1()"> Borrar</button>
@@ -25,7 +25,7 @@
         <div class="section">
             <h2>Convertir ASCCI a Binario</h2>
             <label><b>Ingrese un ASCCI:</b></label>
-            <input type="text" id="ascci">
+            <input type="number" id="ascci" required>
             <br>
             <button onclick="ascbin()">Convertir</button>
             <button onclick="limpiart2()"> Borrar</button>
@@ -34,7 +34,7 @@
         <div class="section">
             <h2>Convertir Binario a Caracter</h2>
             <label><b>Ingrese un Binario:</b></label>
-            <input type="text" id="binario">
+            <input type="text" id="binario" pattern="[01]{1,8}" required>
             <br>
             <button onclick="bincar()">Convertir </button>
             <button onclick="limpiart3()"> Borrar</button>
