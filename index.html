@@ -15,30 +15,36 @@
         </div>
         <div class="section">
             <h2>Convertir Caracter a ASCCI</h2>
-            <label><b>Ingrese un Caracter:</b></label>
-            <input type="text" id="caracter" required>
-            <br>
-            <button onclick="casci()">Convertir</button>
-            <button onclick="limpiart1()"> Borrar</button>
-            <p id="rescasci"></p>
+            <form onsubmit="event.preventDefault(); casci();">
+                <label><b>Ingrese un Caracter:</b></label>
+                <input type="text" id="caracter" required>
+                <br>
+                <button type="submit">Convertir</button>
+                <button type="button" onclick="limpiart1()">Borrar</button>
+                <p id="rescasci"></p>
+            </form>
         </div>
         <div class="section">
-            <h2>Convertir ASCCI a Binario</h2>
-            <label><b>Ingrese un ASCCI:</b></label>
-            <input type="number" id="ascci" required>
-            <br>
-            <button onclick="ascbin()">Convertir</button>
-            <button onclick="limpiart2()"> Borrar</button>
-            <p id="resbin"></p>
+            <h2>Convertir ASCII a Binario</h2>
+            <form onsubmit="event.preventDefault(); ascbin();">
+                <label><b>Ingrese un ASCII:</b></label>
+                <input type="number" id="ascci" required>
+                <br>
+                <button type="submit">Convertir</button>
+                <button type="button" onclick="limpiart2()"> Borrar</button>
+                <p id="resbin"></p>
+            </form>
         </div>
         <div class="section">
             <h2>Convertir Binario a Caracter</h2>
-            <label><b>Ingrese un Binario:</b></label>
-            <input type="text" id="binario" pattern="[01]{1,8}" required>
-            <br>
-            <button onclick="bincar()">Convertir </button>
-            <button onclick="limpiart3()"> Borrar</button>
-            <p id="rescar"></p>
+            <form onsubmit="event.preventDefault(); bincar();">
+                <label><b>Ingrese un Binario:</b></label>
+                <input type="text" id="binario" pattern="[01]{1,8}" title="Solo se permiten 1 y 0." maxlength="8" required>
+                <br>
+                <button type="submit">Convertir</button>
+                <button type="button" onclick="limpiart3()"> Borrar</button>
+                <p id="rescar"></p>
+            </form>
         </div>
     </div>
 </body>
